@@ -1,0 +1,238 @@
+@media (max-width: 500px){
+    * {
+        margin: 0px;
+    }
+    body{
+        margin: 0;
+        padding: 0;
+       
+    }
+
+    /* banner */
+    #banner{
+        margin: 0 15px;
+    }
+    #banner h1{
+        font-size: 23px;
+        left: 35%;
+    }
+    #banner span{
+        left: 37%;
+        font-size: 13px;
+        top:13%;
+    }
+
+    /* nav */
+    #nav-bar {
+    margin-top: -5px;
+    height: 160px;
+    margin-left: 0;
+}
+#nav-bar .container{
+    text-align: center;
+    display: block;
+   /* border: 1px solid red; */
+    width: 200px;
+    
+}
+.pro{
+    border: none;
+}
+.container .icon-user,.icon-mail-alt{
+    margin-left: 30px;
+}
+#nav-bar .container .ad{
+    border: none;
+}
+
+#nav-bar .container a{
+    
+    color: black;
+    text-transform: uppercase;
+    padding-top: 15px;
+    font-size: 15px;
+    text-decoration: none; 
+    display: block;
+    
+}
+
+/* about */
+#about{
+    margin: 0 15px;
+    height: 400px;
+    
+}
+#about .container{
+    width: 450px;
+    display: block;
+    /* display: grid;
+grid-template-columns: 40% 60%;
+    border: 1px solid red; */
+    
+}
+#about .container h1{
+    font-size: 23px;
+    padding-bottom: 20px;
+}
+#target{
+    /* border: 1px solid green; */
+    width: 350px;
+    display: block;
+    
+}
+#personal-info{
+    display: inline;
+    background: #f0f0f0;
+    width: 455px;
+    margin-left: -15px;
+    position: absolute;
+    /* border: 1px solid green; */
+}
+#personal-info .section-title{
+    margin-left: 15%;
+}
+#personal-info #admin-ad{
+    margin-left: 10%;
+    padding-bottom: 20px;
+}
+#personal-info #admin ul li{
+    margin-left: 10%;
+
+}
+
+/* kinh nghiem */
+    
+#job-info .container{
+        
+    width: 500px;
+     display: block;
+    position: relative;
+    margin-top: 350px;
+    margin-left: -55px;
+     /* grid-template-columns: 55% 55%;
+      margin-left: -50px; */
+ }
+ #job-info .container .thongtin h5>i{
+     font-size: 15px;
+     color: black;
+ }
+ #job-info .container .kn .thongtin{
+    width: 270px;
+}
+
+/* chungchi */ 
+#certificate{
+    margin: 0 15px;
+    height:auto ;
+}
+
+#certificate li{
+    list-style-type: none;
+}
+#certificate .container .all>.all2{
+    /* display: grid;
+    grid-template-columns: 50% 50%;
+    row-gap: 40px   ;
+    margin-left: 50px; */
+    display: block;
+}
+.all2{
+    border-bottom: none;
+}
+.all #aaa{
+    border-right: none;
+}
+#certificate .container .section-title{
+    margin-left: 30px;
+    padding:50px 0 ;
+}
+
+.chungchi{
+    padding-left: 60px;
+}
+
+.chungchi h5{
+    font-size: 15px;
+}   
+
+.chungchi .tieude{
+
+   width: 330px;
+   margin-top: 5px;
+   list-style-type: none;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #d6c08d;
+}
+.chungchi .tieude h5{
+    width: 250px;
+   
+}
+.chungchi .tieude li{
+    width: 350px;
+}
+
+.chungchiso3{
+    padding: 0;
+    margin: 0;
+    padding-left: 60px;
+    padding-bottom: 50px;
+}
+
+/* du an */
+#project{
+    /* border: 1px solid green; */
+     margin: 0 15px;
+ }
+ #project .container .allduan{
+     display: block;
+     padding: 10px 0;
+    margin-left: 5%;
+ }
+ 
+ #project .container .section-title{
+     margin-left: 50px;
+ }
+ #project .container .allduan .duan{
+     border: 1px solid gray;
+     width: 300px;
+        margin-left: 30px;
+        margin: 10px 0;
+ }
+ #project .container .allduan .duan img{
+     width: 300px;
+     height: 200px;
+     border-bottom: 1px solid gray;
+ }
+ 
+ .list{
+     border-bottom: 1px solid gray;
+     height: 100px;
+     
+ }
+ 
+ .list p{
+     display: block;
+     margin-left: 20px; 
+ }
+ .list .icon-user{
+    margin-left: -5px;
+    color: black;
+ }
+ .list .icon-lamp{
+    margin-left: -5px;
+    color: black;
+ }
+
+ /* footer */
+#footer{
+    height: 80px;
+    margin: 0 15px;
+
+}
+#footer .container ul{
+    padding-top: 15px;
+    margin-left: 0;
+    font-size: 18px;
+}
+
+}
