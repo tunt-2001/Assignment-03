@@ -164,6 +164,7 @@ about phan3 */
     text-transform: uppercase;
     font-size: 12px;
     background: yellow;
+    border: 1px solid gray;
     display: none;
 }
 
