@@ -4,16 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../Assignment 03/css/laptop.css" />
-    <link rel="stylesheet" href="../Assignment 03/css/font.css" />
-    <link rel="stylesheet" href="../Assignment 03/css/tablet.css">
-    <link rel="stylesheet" href="../Assignment 03/css/mobile.css">
+    <link rel="stylesheet" href="./css/laptop.css" />
+    <link rel="stylesheet" href="./css/font.css" />
+    <link rel="stylesheet" href="./css/tablet.css">
+    <link rel="stylesheet" href="./mobile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Assignment 03</title>
   </head>
   <body>
     <div id="banner">
-      <img src="../Assignment 03/images/banner.jpg" alt="" />
+      <img src="./images/banner.jpg" alt="" />
       <h1>Nguyễn Văn A</h1>
       <span>Full Stack Developer</span>
     </div>
@@ -58,8 +58,11 @@
                     type="button"
                     name="submit"
                     value="Submit"
-                    onclick="ValidateEmail(document.form1.text1)"
-                  />
+                    onclick="ValidateEmail(document.form1.text1)"/>
+                    <!-- document.form1.text là
+                    document là phần tử gốc đại diện cho html
+                    form1 là tên biểu mẫu(form)
+                    text1 là thuộc tính của văn bản đầu vào -->
                 </li>
               </ul>
             </form>
@@ -87,9 +90,13 @@
     <section id="job-info">
       <div class="container">
         <div style="margin-top: 20px" class="kn">
-          <h1>Kinh nghiệm</h1>
+          <h1 onmouseout="be(this)" onmouseover="to(this)" >Kinh nghiệm
+            <button type="button" name="show" id="show" 
+            onclick="showContent()">Viewmore</button>
+          </h1>
+          
           <i class="ic-toolbox"></i>
-          <div class="thongtin" >
+          <div class="thongtin" id="showproject" >
             <li>Fullstack Developer - Công ty Y</li>
             <h5><i>05/2022</i> - <i id="ii">Hiện tại </i></h5>
             <p>
@@ -110,9 +117,12 @@
           </div>
         </div>
         <div style="margin-top: 20px" class="kn">
-          <h1>Kỹ năng</h1>
+          <h1 onmouseout="be1(this)" onmouseover="to1(this)" >Kỹ năng
+            <button type="button" name="show1" id="show1" 
+            onclick="showContent1()">View more</button>
+          </h1>
           <i class="ic-tools-2"></i>
-          <div class="kynang">
+          <div class="kynang" id="showproject1">
             <li>HTML/CSS: Fundamental</li>
             <span></span>
             <span id="span"></span>
@@ -132,9 +142,14 @@
           </div>
         </div>
         <div style="margin-top: 20px" class="kn">
-          <h1>Ngôn ngữ</h1>
+          <h1 onmouseout="be2(this)" onmouseover="to2(this)" >Ngôn ngữ
+            <button type="button" name="show2" id="show2" 
+            onclick="showContent2()">
+            View more
+            </button>
+          </h1>
           <i class="ic-mic"></i>
-          <div class="kynang1">
+          <div class="kynang1" id="showproject2">
             <li>Tiếng Anh - IELTS 7.0</li>
             <span></span>
             <span></span>
@@ -146,9 +161,14 @@
           </div>
         </div>
         <div style="margin-top: 20px" class="kn">
-          <h1>Hoạt động</h1>
+          <h1 onmouseout="be3(this)" onmouseover="to3(this)" >Hoạt động
+            <button type="button" name="show3" id="show3" 
+            onclick="showContent3()">
+            View more
+            </button>
+          </h1>
           <i class="ic-toolbox"></i>
-          <div class="thongtin">
+          <div class="thongtin" id="showproject3">
             <li>FPT Edu - Hackathon 2019</li>
             <h5><i>03/2019 - 05/2019</i></h5>
             <p>- Giải 3 bảng A</p>
@@ -161,9 +181,14 @@
           </div>
         </div>
         <div style="margin-top: 20px" class="kn">
-          <h1>Học vấn</h1>
+          <h1 onmouseout="be4(this)" onmouseover="to4(this)" >Học vấn
+            <button type="button" name="show4" id="show4" 
+            onclick="showContent4()">
+            View more
+            </button>
+          </h1>
           <i class="ic-pencil"></i>
-          <div class="thongtin">
+          <div class="thongtin" id="showproject4">
             <li>FUNiX</li>
             <h5><i>06/2021 - 05/2022</i></h5>
             <p>- Tốt nghiệp chứng chỉ doanh nghiệp nhánh Fullstack</p>
@@ -177,14 +202,23 @@
           </div>
         </div>
         <div style="margin-top: 20px" class="kn">
-          <h1>Sở thích</h1>
+          <h1 onmouseout="be5(this)" onmouseover="to5(this)" >Sở thích
+            <button type="button" name="show5" id="show5" 
+            onclick="showContent5()">
+            View more
+            </button>
+          </h1>
           <i class="ic-telescope"></i>
-          <p class="audio">
-            <i class="ic-megaphone"></i>
+          <div id="showproject5">
+            <li class="ic-megaphone"></li>
+            <li class="ic-strategy"></li>
+            <li class="ic-hotairballoon"></li>
+            <li class="ic-basket"></li>
+            <!-- <i class="ic-megaphone"></i>
             <i class="ic-strategy"></i>
             <i class="ic-hotairballoon"></i>
-            <i class="ic-basket"></i>
-          </p>
+            <i class="ic-basket"></i> -->
+          </div>
         </div>
       </div>
     </section>
@@ -194,7 +228,7 @@
         <div class="all">
           <div class="all2">
             <div class="chungchi" id="aaa">
-              <img src="../Assignment 03/images/Cert_DBI.png" alt="" />
+              <img src="./images/Cert_DBI.png" alt="" />
               <div class="tieude">
                 <h5>CHỨNG CHỈ LẬP TRÌNH WEB - FUNIX</h5>
                 <li>- Chứng chỉ thuộc chương trình CCDN</li>
@@ -202,7 +236,7 @@
               </div>
             </div>
             <div class="chungchi">
-              <img src="../Assignment 03/images/Cert_WEB.png" alt="" />
+              <img src="./images/Cert_WEB.png" alt="" />
               <div class="tieude">
                 <h5>CHỨNG CHỈ LẬP TRÌNH JAVASCRIPT - FUNIX</h5>
                 <li>- Chứng chỉ thuộc chương trình CCDN</li>
@@ -212,7 +246,7 @@
           </div>
 
           <div class="chungchi chungchiso3" >
-            <img src="../Assignment 03/images/Cert_PRF.png" alt="" />
+            <img src="./images/Cert_PRF.png" alt="" />
             <div class="tieude">
               <h5>CHỨNG CHỈ THIẾT KẾ DATABASE - FUNIX</h5>
               <li>- Chứng chỉ thuộc chương trình CCDN</li>
@@ -228,7 +262,7 @@
         <h1 class="section-title">Dự án</h1>
         <div class="allduan">
           <div class="duan">
-            <img src="../Assignment 03/images/project_1.png" alt="" />
+            <img src="./images/project_1.png" alt="" />
             <div class="cvcanhan"><a href="digital-cv.html">cv cá nhân</a></div>
             <div class="list">
               <p id="year">2021</p>
@@ -258,7 +292,7 @@
           </div>
           <div class="duan">
             <img
-              src="../Assignment 03/images/project_2.png"
+              src="./images/project_2.png"
               alt=""
               width="200px"
             />
@@ -290,7 +324,7 @@
           </div>
           <div class="duan">
             <img
-              src="../Assignment 03/images/project_3.png"
+              src="./images/project_3.png"
               alt=""
               width="200px"
             />
@@ -340,6 +374,6 @@
       </div>
     </section>
 
-    <script src="../Assignment 03/ass.js"></script>
+    <script src="./ass.js"></script>
   </body>
 </html>

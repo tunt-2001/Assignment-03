@@ -153,6 +153,29 @@ about phan3 */
     /* height: 450px; */
     
 }
+#job-info .container .kn h1{
+    cursor:default ;
+}
+#job-info .container .kn button{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-size: 12px;
+    background: yellow;
+    display: none;
+}
+
+.kynang , .kynang1 , .thongtin {
+    display: none;
+    
+}
+#job-info .container .kn #showproject1{
+    display: none;
+}
+/* .audio i{ display: none;} */
+
 #job-info .container .kn .kynang{
     margin-bottom: 140px;
     margin-left: 40px;
@@ -231,21 +254,19 @@ about phan3 */
     color: gray;
     padding: 3px 0;
 }
-#job-info .container .kn .audio{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
-    column-gap: 30px;
+#job-info .container .kn #showproject5{
+    display: inline;
+    width: 300px;
     margin-bottom: 100px;
-    margin-left: 20px;
-    
-    
+    padding-left: 20px;
+    border: 1px solid red;
+    display: none;
 }
-#job-info .container .kn .audio i{
+
+#job-info .container .kn #showproject5 li{
     padding: 10px 10px;
-    /* margin: 0 4px;
-    margin-top: 20px; */
+    margin: 0 5px;  
     border-radius: 25px;
-    /* background-color: #199cdb; */
     border: 1px solid #199cdb;
     text-align: center;
     color: #199cdb;
@@ -273,6 +294,8 @@ about phan3 */
     padding-top: 20px;
     color: gray;
 }
+
+
 /* 
 chungchi */
 #certificate{
